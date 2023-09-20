@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Nick Hagerty" />
 
 
-<title>README</title>
+<title>My Incredible HTML File</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -348,692 +349,70 @@ display: none;
 
 
 
+<h1 class="title toc-ignore">My Incredible HTML File</h1>
+<h4 class="author">Nick Hagerty</h4>
+<h4 class="date">9/7/2023</h4>
 
 </div>
 
 
-<div id="course-materials-for-advanced-data-analytics-in-economics" class="section level1">
-<h1>Course Materials for Advanced Data Analytics in Economics</h1>
-<p>Nick Hagerty, Montana State University</p>
-<p>Except where otherwise noted, this work is licensed under
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
-Commons BY-NC-SA 4.0</a>.</p>
-<hr />
-<p><strong>Skip to:</strong> <a href="#lecture-slides">Lecture
-slides</a> | <a href="#supplemental-labs">Supplemental labs</a> | <a href="#external-resources">External resources</a></p>
-<hr />
-<div id="lecture-slides" class="section level2">
-<h2>Lecture slides</h2>
-<p>Fall 2023</p>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/01-R-basics/01-R-basics.html"><strong>Topic
-1: R Basics</strong></a> (<a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/lecture-slides/01-R-basics/01-R-basics.pdf">.pdf</a>)</p>
+<div id="biggest-header" class="section level1">
+<h1>Biggest header</h1>
+<div id="less-big-header" class="section level2">
+<h2>Less big header</h2>
+<div id="smaller-header" class="section level3">
+<h3>Smaller header</h3>
+<div id="small-header" class="section level4">
+<h4>Small header</h4>
+<p><strong>Bold</strong> text. <em>Italic</em> text. Link to <a href="http://www.google.com">Google</a>.</p>
+<p>Bulleted list of things:</p>
 <ul>
-<li>About R</li>
-<li>Operators</li>
-<li>Objects and functions</li>
-<li>Data frames</li>
-<li>Vectors</li>
-<li>Indexing</li>
-</ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/02-Programming/02-Programming.html"><strong>Topic
-2: Programming in R</strong></a></p>
+<li>One thing</li>
+<li>Another thing
 <ul>
-<li>If/else statements</li>
-<li>For-loops</li>
-<li>Functions</li>
-<li>Vectorization</li>
-<li>Parallelization</li>
-</ul>
-<p><strong>Topic 3: Productivity Tools</strong></p>
-<ul>
-<li><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/03-Productivity/Git_and_GitHub.pdf"><strong>Version
-control</strong></a></li>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/lecture-slides/03-Productivity/R-Markdown-example.Rmd"><strong>R
-Markdown</strong></a></li>
-</ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/04-Wrangling/04-Wrangling.html"><strong>Topic
-4: Data Wrangling</strong></a></p>
-<ul>
-<li>Philosophy of tidy data</li>
-<li>Wrangling data with <code>dplyr</code></li>
-<li>Joining data with <code>dplyr</code></li>
-<li>Tidying data with <code>tidyr</code></li>
-<li>Importing data with <code>readr</code></li>
-</ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/05-Cleaning/05-Cleaning.html"><strong>Topic
-5: Data Cleaning</strong></a></p>
-<ul>
-<li>Join safety</li>
-<li>Keys and relational data</li>
-<li>String cleaning</li>
-<li>Number storage</li>
-<li>Data Cleaning Checklist (<a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/data-cleaning-checklist/Data-Cleaning-Checklist.pdf">pdf
-version</a>)</li>
-</ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/06-Acquisition/06-Acquisition.html"><strong>Topic
-6: Data Acquisition</strong></a></p>
-<ul>
-<li>Where data comes from</li>
-<li>Webscraping</li>
-<li>Using APIs</li>
-</ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/07-Best-Practices/07-Best-Practices.html"><strong>Topic
-7: Best Practices for Coding and Workflows</strong></a></p>
-<ul>
-<li>The perils of bad data cleaning</li>
-<li>Reproducibility and transparency</li>
-<li>Best practices (code organization, file organization, version
-control, abstraction, commenting, unit tests)</li>
-</ul>
-<p><strong>Topic 8: Exploratory Analysis</strong></p>
-<ul>
-<li><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/08-Exploratory/09-Exploratory-part1.html"><strong>Part
-1</strong></a>
-<ul>
-<li>Summaries, frequency tables and crosstabs in R</li>
-<li>Characterizing distributions</li>
-<li>Handling extreme values</li>
-<li>Handling variable transformations</li>
-<li>Handling missing data</li>
+<li>Sub-thing</li>
+<li>Sub-thing</li>
 </ul></li>
-<li><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/08-Exploratory/09-Exploratory-part2.html"><strong>Part
-2</strong></a>
-<ul>
-<li>Characterizing relationships</li>
-<li>Binscatter</li>
-<li>The Conditional Expectation Function</li>
-<li>Adjusting for other variables</li>
-<li>Bin smoothing and local regression</li>
-</ul></li>
+<li>A final thing</li>
 </ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/09-Visualization/09-Visualization.html"><strong>Topic
-9: Data Visualization</strong></a></p>
-<ul>
-<li>Basics of <code>ggplot2</code></li>
-<li>Plotting examples</li>
-<li>Colors and themes</li>
-<li>Principles of data visualization</li>
-<li>Case studies</li>
-</ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/10-Distinguishing-Goals/10-Distinguishing-Goals.html"><strong>Topic
-10: Distinguishing Goals of Data Analysis</strong></a></p>
-<ul>
-<li>The Data Generating Process</li>
-<li>Potential outcomes, counterfactuals, and causal inference</li>
-<li>Descriptive, Predictive, or Causal Analysis?</li>
-</ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/11-Regression/12-Regression.html"><strong>Topic
-11: Regression Modeling</strong></a></p>
-<ul>
-<li>Basic regression in R</li>
-<li>Review: Interpreting coefficients</li>
-<li>Indicator and interaction terms</li>
-<li>Econometrics packages in R</li>
-<li>Modeling nonlinear relationships</li>
-</ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/12-Learning/13-Learning.html"><strong>Topic
-12: Machine Learning Fundamentals</strong></a></p>
-<ul>
-<li>Review: Prediction</li>
-<li>Statistical learning</li>
-<li>Model accuracy</li>
-<li>Cross-validation</li>
-</ul>
-<p><strong>Topic 13: Prediction Methods</strong></p>
-<ul>
-<li><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/13-Prediction/14a-Shrinkage.html"><strong>Part
-1: Shrinkage methods</strong></a>
-<ul>
-<li>Shrinkage methods</li>
-<li>Ridge regression</li>
-<li>Lasso (and elasticnet)</li>
-</ul></li>
-<li><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/13-Prediction/14b-Tidymodels.html"><strong>Part
-2: Learning with <code>tidymodels</code></strong></a>
-<ul>
-<li>Setup and splitting</li>
-<li>Recipes</li>
-<li>Workflows</li>
-<li>Tuning</li>
-<li>Prediction</li>
-<li>Dependence</li>
-</ul></li>
-</ul>
-<p><strong>Topic 14: Classification Methods</strong></p>
-<ul>
-<li><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/14-Classification/15a-Classification.html"><strong>Part
-1: Methods</strong></a>
-<ul>
-<li>Classification</li>
-<li>Logistic regression</li>
-<li><em>k</em>-nearest neighbors</li>
-<li>Model assessment</li>
-<li>Decision trees</li>
-</ul></li>
-<li><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/14-Classification/15b-Examples.html"><strong>Part
-2: Examples</strong></a>
-<ul>
-<li>Logistic regression and KNN</li>
-<li>Cross-validation</li>
-<li>Decision trees</li>
-<li>Teach your laptop to read</li>
-</ul></li>
-</ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/15-ML-Applications/16-ML-Applications.html"><strong>Topic
-15: Machine Learning in Economics</strong></a></p>
-<ul>
-<li>Predicting outcomes</li>
-<li>Constructing new data</li>
-<li>Selecting covariates</li>
-<li>Predicting causal effects</li>
-</ul>
-<p><strong>Topic 16: Spatial Analysis</strong></p>
-<ul>
-<li><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/16-Spatial/Overview_Geospatial_Data.pdf"><strong>Intro
-to Geospatial Data</strong></a></li>
-<li><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/16-Spatial/10-Spatial-part1.html"><strong>Part
-1</strong></a>
-<ul>
-<li>Spatial data and quick mapping</li>
-<li>Reference systems and projections</li>
-</ul></li>
-<li><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/16-Spatial/10-Spatial-part2.html"><strong>Part
-2</strong></a>
-<ul>
-<li>Spatial queries (measurement, relationships)</li>
-<li>Spatial subsetting</li>
-<li>Geometry operations</li>
-<li>Spatial joins</li>
-</ul></li>
-</ul>
-<p><a href="https://raw.githack.com/msu-econ-data-analytics/course-materials/main/lecture-slides/17-Databases/17-Databases.html"><strong>Topic
-17: Databases and Big Data</strong></a></p>
-<ul>
-<li>Tools for big data</li>
-<li>Databases in R</li>
-<li>Writing SQL queries</li>
-<li>Getting started with BigQuery</li>
-</ul>
+<p>Numbered list:</p>
+<ol style="list-style-type: decimal">
+<li>Get up</li>
+<li>Shower</li>
+<li>Eat breakfast
+<ol style="list-style-type: lower-alpha">
+<li>Drink coffee too</li>
+</ol></li>
+<li>Get out the door</li>
+</ol>
+<p>Here is a <strong>code chunk</strong> with the default options. It
+prints both the code and the output:</p>
+<pre class="r"><code>2+2</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p>If you want to hide the code, but print the output, use
+<code>```{r, echo=FALSE}</code>.</p>
+<pre><code>## [1] 4</code></pre>
+<p>If you want to hide both the code and the output, but still run it in
+the background, use <code>```{r, include=FALSE}</code>.</p>
+<p>If you want to print the code, but not run it, use
+<code>```{r, eval=FALSE}</code>.</p>
+<pre class="r"><code>2+2</code></pre>
+<p>A horizontal line follows.</p>
 <hr />
 </div>
-<div id="supplemental-labs" class="section level2">
-<h2>Supplemental labs</h2>
-<p>By Laura Sikoski</p>
-<ul>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/supplemental-lab-scripts/Lecture%200%20-%20Getting%20Started.R">Lab
-0: Getting started with R</a></li>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/supplemental-lab-scripts/Lecture%201%20-%20Intro.R">Lab
-1: Intro</a></li>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/supplemental-lab-scripts/Lecture%202%20-%20Cleaning.R">Lab
-2: Cleaning</a></li>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/supplemental-lab-scripts/Lecture%203%20-%20Merges.R">Lab
-3: Merges</a></li>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/supplemental-lab-scripts/Lecture%204%20-%20Pivots.R">Lab
-4: Pivots</a></li>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/supplemental-lab-scripts/Lecture%205%20-%20OLS%20Intro.R">Lab
-5: Regressions</a></li>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/supplemental-lab-scripts/Lecture%206%20-%20If%20Else%20Statements.R">Lab
-6: If/else statements</a></li>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/supplemental-lab-scripts/Lecture%207%20-%20For%20Loops.R">Lab
-7: For loops</a></li>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/supplemental-lab-scripts/Lecture%208%20-%20Functions.R">Lab
-8: Functions</a></li>
-<li><a href="https://github.com/msu-econ-data-analytics/course-materials/blob/main/supplemental-lab-scripts/Lecture%209%20-%20Intro%20to%20ggplot.R">Lab
-9: Intro to ggplot2</a></li>
-</ul>
-<hr />
 </div>
-<div id="external-resources" class="section level2">
-<h2>External resources</h2>
-<p>This is a list of further resources that you may find helpful
-throughout (and after!) this course. Start with the course materials
-above, but check these out for alternative explanations or if you want
-to take a deeper dive into a particular topic. If one isn’t speaking to
-you, try another.</p>
-<div id="basics-of-r" class="section level3">
-<h3>Basics of R</h3>
-<ul>
-<li><a href="https://rafalab.github.io/dsbook/r-basics.html"><em>Introduction
-to Data Science</em> Ch. 3: R Basics</a> (Rafael A. Irizarry). Data
-types, data frames, vectors, indexing, basic plots.</li>
-<li><a href="https://mdsr-book.github.io/mdsr2e/ch-R.html"><em>Modern
-Data Science with R</em> Appendix B: Introduction to R and RStudio</a>
-(Baumer, Kaplan, and Horton). Installation, help, objects, vectors,
-indexing, operators, lists, matrices, data frames, attributes and
-classes, functions, packages.</li>
-<li><a href="https://datacarpentry.org/r-socialsci/">R for Social
-Scientists</a> (The Carpentries).</li>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/04-rlang/04-rlang.html"><em>Big
-Data in Economics</em> Lecture 4: R Language Basics</a> (Grant
-McDermott). Slides. Logic, evaluation, assignment, help, objects, names,
-indexing, lists.</li>
-<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/base-r.pdf">Cheat
-Sheet: Base R</a> (RStudio).</li>
-<li>DataCamp tutorials:
-<ul>
-<li><a href="https://learn.datacamp.com/courses/introduction-to-writing-functions-in-r">Introduction
-to R</a> (free to everyone)</li>
-<li><a href="https://learn.datacamp.com/courses/intermediate-r">Intermediate
-R</a> (free for 6 months for enrolled students)</li>
-</ul></li>
-</ul>
 </div>
-<div id="programming-in-r" class="section level3">
-<h3>Programming in R</h3>
-<ul>
-<li><a href="https://rafalab.github.io/dsbook/programming-basics.html"><em>Introduction
-to Data Science</em> Ch. 4: Programming Basics</a> (Rafael A. Irizarry).
-If/else, writing functions, for-loops, vectorization, functionals.</li>
-<li><a href="https://greenwood-stat.shinyapps.io/IntermediateR-learnr">Intermediate
-R</a> (Montana State University R Workshops Team). Relational operators,
-logicals, conditional statements, loops, functions.</li>
-<li><a href="https://r4ds.had.co.nz/program-intro.html"><em>R for Data
-Science</em> Ch. 17-21</a> (Hadley Wickham). Pipes, functions, vectors,
-iteration.</li>
-<li>Big Data in Economics (Grant McDermott):
-<ul>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/10-funcs-intro/10-funcs-intro.html">Lecture
-10: Functions in R: (1) Introductory Concepts</a>. Function syntax,
-control flow, iteration, vectorization. The section on functional
-programming uses the tidyverse, which we’re covering later in the
-course.</li>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/11-funcs-adv/11-funcs-adv.html">Lecture
-11: Functions in R: (2) Advanced Concepts</a>. Debugging, catching user
-errors, caching.</li>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/12-parallel/12-parallel.html">Lecture
-12: Parallel programming</a>.</li>
-</ul></li>
-<li>DataCamp tutorial (free for 6 months for enrolled students): <a href="https://learn.datacamp.com/courses/introduction-to-writing-functions-in-r">Introduction
-to Writing Functions in R</a>.</li>
-</ul>
-</div>
-<div id="r-markdown" class="section level3">
-<h3>R Markdown</h3>
-<ul>
-<li><a href="https://slides.djnavarro.net/starting-rmarkdown/">Intro to
-R Markdown</a> (Danielle Navarro). Nice overview of why we’re using R
-Markdown, and examples of how to use it.</li>
-<li><a href="https://ntaback.github.io/UofT_STA130/Rmarkdownforclassreports.html">Using
-R Markdown for Class Assignments</a> (Nate Taback). A pretty quick
-overview.</li>
-<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown.pdf">Cheat
-Sheet: R Markdown</a> (RStudio). Most of what you want to know on 2
-pages.</li>
-<li><a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">R
-Markdown Reference Guide</a> (RStudio). A bit more comprehensive than
-the cheat sheet.</li>
-<li><a href="https://r4ds.had.co.nz/communicate-intro.html"><em>R for
-Data Science</em> Ch. 27: R Markdown</a> (Hadley Wickham). Comprehensive
-introduction.</li>
-</ul>
-</div>
-<div id="git-and-github" class="section level3">
-<h3>Git and GitHub</h3>
-<ul>
-<li><a href="https://guides.github.com/activities/hello-world/">GitHub
-Guides: Hello World</a>. Branches and merges in GitHub.</li>
-<li><a href="https://guides.github.com/activities/forking/">GitHub
-Guides: Forking Projects</a>. Forking and pull requests in GitHub.</li>
-<li><a href="https://happygitwithr.com/"><em>Happy Git and GitHub for
-the useR</em></a> (Jenny Bryan). How to take advantage of RStudio’s
-convenient built-in features that integrate Git and GitHub.</li>
-<li><a href="https://raw.githack.com/uo-ec510-2020-spring/lectures/master/02-git/02-git.html"><em>Big
-Data in Economics</em> Lecture 2: Version Control with Git(Hub)</a>
-(Grant McDermott). Getting started with Git at the command line.</li>
-<li><a href="https://raw.githack.com/tyleransom/DScourseS21/master/LectureNotes/03-CLI-Git/git_tutorial.pdf"><em>Data
-Science for Economists</em> Ch. 3: Using Git and GitHub.com</a> (Tyler
-Ransom). More on Git at the command line.</li>
-</ul>
-</div>
-<div id="data-wrangling-with-the-tidyverse" class="section level3">
-<h3>Data wrangling with the tidyverse</h3>
-<ul>
-<li><a href="https://rconnect.math.montana.edu/Data_Wrangling/">Wrangling,
-Analyzing and Exporting Data with the Tidyverse</a> (Montana State R
-Workshops Team). Interactive tutorial.</li>
-<li><a href="https://github.com/dlab-berkeley/R-wrang">Data Wrangling
-and Manipulation in R</a> (UC Berkeley D-Lab). Slides with coding
-examples. Functions, for-loops, if/else, Monte Carlo simulations.</li>
-<li><a href="https://mdsr-book.github.io/mdsr2e/ch-dataI.html"><em>Modern Data
-Science with R</em> Chapters 4-6</a> (Baumer, Kaplan, and Horton).
-Chapter 4: Data wrangling with dplyr. Chapter 5: Joins. Chapter 6: Tidy
-data and tidyr.</li>
-<li><a href="https://moderndive.com/3-wrangling.html"><em>ModernDive</em>
-Chapter 3: Data Wrangling</a> (Ismay &amp; Kim). Data wrangling with
-dplyr.</li>
-<li>RStudio Cheat Sheets:
-<ul>
-<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf">Data
-Transformation with dplyr</a></li>
-<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf">Data
-Tidying with tidyr</a></li>
-<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-import.pdf">Data
-import with the tidyverse</a></li>
-</ul></li>
-<li>DataCamp tutorials (free for 6 months for enrolled students):
-<ul>
-<li><a href="https://learn.datacamp.com/courses/introduction-to-the-tidyverse">Introduction
-to the Tidyverse</a></li>
-<li><a href="https://learn.datacamp.com/courses/introduction-to-the-tidyverse">Data
-Manipulation with dplyr</a></li>
-<li><a href="https://learn.datacamp.com/courses/introduction-to-the-tidyverse">Joining
-data with dplyr</a></li>
-</ul></li>
-</ul>
-</div>
-<div id="data-cleaning" class="section level3">
-<h3>Data cleaning</h3>
-<ul>
-<li><a href="https://jhudatascience.org/tidyversecourse/wrangle-data.html"><em>Tidyverse
-Skills for Data Science</em> Chapter 3</a> (Carrie Wright, Shannon E.
-Ellis, Stephanie C. Hicks and Roger D. Peng). Covers the basics of
-working with factors, dates and times, strings, and text as data.</li>
-<li><em>R for Data Science</em> (Hadley Wickham):
-<ul>
-<li><a href="https://r4ds.had.co.nz/strings.html">Chapter 14:
-Strings</a></li>
-<li><a href="https://r4ds.had.co.nz/factors.html">Chapter 15:
-Factors</a></li>
-<li><a href="https://r4ds.had.co.nz/dates-and-times.html">Chapter 16:
-Dates and times</a></li>
-</ul></li>
-<li>RStudio Cheat Sheets:
-<ul>
-<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/strings.pdf">String
-manipulation with stringr</a></li>
-<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/factors.pdf">Factors
-with forcats</a></li>
-<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/lubridate.pdf">Dates
-and Times with lubridate</a></li>
-</ul></li>
-<li><a href="https://github.com/Quartz/bad-data-guide">Quartz Guide to
-Bad Data</a>.</li>
-</ul>
-</div>
-<div id="data-acquisition-and-webscraping" class="section level3">
-<h3>Data acquisition and webscraping</h3>
-<ul>
-<li><a href="https://davidson.libguides.com/data/tips">How to Find Data:
-Tips for Finding Data</a> (Davidson College Library).</li>
-<li><a href="https://libraryguides.missouri.edu/datasets/public-use">Data Sets
-for Quantitative Research: Public Use Datasets</a> (University of
-Missouri Libraries).</li>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/06-web-css/06-web-css.html"><em>Data
-Science for Economists</em> Lecture 6: Webscraping: (1) Server-side and
-CSS</a> (Grant McDermott).</li>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/07-web-apis/07-web-apis.html"><em>Data
-Science for Economists</em> Lecture 7: Webscraping: (2) Client-side and
-APIs</a> (Grant McDermott).</li>
-<li><a href="https://zapier.com/learn/apis/">An Introduction to APIs</a>
-(Zapier).</li>
-</ul>
-</div>
-<div id="best-practices-for-coding-and-workflows" class="section level3">
-<h3>Best practices for coding and workflows</h3>
-<ul>
-<li><a href="https://pubs.aeaweb.org/doi/pdf/10.1257/jep.35.3.193">Evidence on
-Research Transparency in Economics</a> (Edward Miguel, <em>Journal of
-Economic Perspectives</em> 2021).</li>
-<li><a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best
-Practices for Scientific Computing</a> (Wilson et al. 2014).</li>
-<li><a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf">Code
-and Data for the Social Sciences: A Practitioner’s Guide</a> (Gentzkow
-&amp; Shapiro 2014).</li>
-<li><a href="https://scholar.harvard.edu/files/ristovska/files/coding_for_econs_20190221.pdf">Coding
-for Economists: A Language-Agnostic Guide to Programming for
-Economists</a> (Ljubica “LJ” Ristovska 2019).</li>
-<li><a href="https://style.tidyverse.org/">The tidyverse style guide</a>
-(Hadley Wickham).</li>
-</ul>
-</div>
-<div id="distinguishing-goals-of-data-analysis" class="section level3">
-<h3>Distinguishing goals of data analysis</h3>
-<ul>
-<li><em>Thinking Clearly with Data</em> (Ethan Bueno de Mesquita and
-Anthony Fowler 2021, Princeton University Press).</li>
-<li><a href="https://theeffectbook.net/ch-Identification.html"><em>The
-Effect: An Introduction to Research Design and Causality</em> Chapter 5:
-Identification</a> (Nick Huntington-Klein).</li>
-<li><a href="https://mixtape.scunning.com/04-potential_outcomes"><em>Causal
-Inference: The Mixtape</em> Chapter 4: Potential Outcomes Causal
-Model</a> (Scott Cunningham).</li>
-</ul>
-</div>
-<div id="exploratory-analysis" class="section level3">
-<h3>Exploratory analysis</h3>
-<ul>
-<li><a href="https://rafalab.github.io/dsbook/distributions.html"><em>Introduction
-to Data Science</em> Chapter 8: Visualizing data distributions</a>
-(Rafael A. Irizarry). Histograms, density plots, stratification.</li>
-<li><a href="https://rafalab.github.io/dsbook/smoothing.html"><em>Introduction
-to Data Science</em> Chapter 28: Smoothing</a> (Rafael A. Irizarry). Bin
-smoothing, kernels, and local regression.</li>
-<li>DataCamp tutorial (free for 6 months for enrolled students): <a href="https://learn.datacamp.com/courses/exploratory-data-analysis-in-r">Exploratory
-Data Analysis in R</a>.</li>
-</ul>
-</div>
-<div id="spatial-analysis" class="section level3">
-<h3>Spatial analysis</h3>
-<ul>
-<li><a href="https://github.com/dlab-berkeley/R-Geospatial-Fundamentals">R
-Geospatial Fundamentals</a> (UC Berkeley D-Lab). Great tutorial. Core
-concepts, vector data, spatial analysis, raster data.</li>
-<li><a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction
-to Geospatial Raster and Vector Data with R</a> (The Carpentries).
-Another great tutorial, though focused more on ecology than social
-science.</li>
-<li><a href="https://mdsr-book.github.io/mdsr2e/ch-spatial.html"><em>Modern
-Data Science with R</em> Chapters 17-18</a> (Baumer, Kaplan, and
-Horton). Chapter 17: Working with geospatial data. Chapter 18:
-Geospatial computations.</li>
-<li><a href="https://geocompr.robinlovelace.net/"><em>Geocomputation
-with R</em></a> (Lovelace, Nowosad, and Muenchow). Comprehensive
-treatment of GIS tools in R.</li>
-</ul>
-</div>
-<div id="data-visualization" class="section level3">
-<h3>Data visualization</h3>
-<ul>
-<li><a href="https://rafalab.github.io/dsbook/introduction-to-data-visualization.html"><em>Introduction
-to Data Science</em> Chapters 6-10: Data Visualization</a> (Rafael A.
-Irizarry).</li>
-<li><a href="https://mdsr-book.github.io/mdsr2e/ch-vizI.html"><em>Modern
-Data Science with R</em> Chapters 2-3</a> (Baumer, Kaplan, and Horton).
-Chapter 2: Principles of data visualization. Chapter 3: Plotting with
-ggplot2.</li>
-<li><a href="https://socviz.co/">Data Visualization: A practical
-introduction</a> (Kieran Healy). Online book for both principles and
-methods/examples.</li>
-<li><a href="https://www.data-to-viz.com/">From Data to Viz</a> (Yan
-Holtz &amp; Conor Healy). “Leads you to the most appropriate graph for
-your data. It links to the code to build it and lists common caveats you
-should avoid.”</li>
-<li><a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf">Cheat
-Sheet: Data visualization with ggplot2</a> (RStudio).</li>
-<li><a href="https://www.aeaweb.org/articles?id=10.1257/jep.28.1.209">An
-Economist’s Guide to Visualizing Data</a> (Jonathan Schwabish,
-<em>Journal of Economic Perspectives</em> 2014.)</li>
-<li>DataCamp tutorials (free for 6 months for enrolled students):
-<ul>
-<li><a href="https://learn.datacamp.com/courses/introduction-to-data-visualization-with-ggplot2">Introduction
-to Data Visualization with ggplot2</a></li>
-<li><a href="https://learn.datacamp.com/courses/intermediate-data-visualization-with-ggplot2">Intermediate
-Data Visualization with ggplot2</a></li>
-</ul></li>
-</ul>
-</div>
-<div id="regression-modeling-in-r" class="section level3">
-<h3>Regression modeling in R</h3>
-<ul>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/08-regression/08-regression.html"><em>Big
-Data in Economics</em> Lecture 8: Regression Analysis in R</a> (Grant
-McDermott).</li>
-<li><a href="https://raw.githack.com/edrubin/EC525S19/master/NotesLab/04RReg/04RReg.html"><em>Prediction
-and Machine Learning</em> Lab 4: Regression with R</a> (Ed Rubin).</li>
-<li><a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf"><em>ISLR</em>
-Ch. 7: Moving Beyond Linearity</a> (James, Witten, Hastie, Tibshirani).
-Polynomial regressions, step functions, splines.</li>
-<li>DataCamp tutorials (free for 6 months for enrolled students):
-<ul>
-<li><a href="https://learn.datacamp.com/courses/introduction-to-regression-in-r">Introduction
-to Regression in R</a></li>
-<li><a href="https://learn.datacamp.com/courses/intermediate-regression-in-r">Intermediate
-Regression in R</a></li>
-</ul></li>
-</ul>
-</div>
-<div id="fundamentals-of-machine-learning" class="section level3">
-<h3>Fundamentals of machine learning</h3>
-<ul>
-<li><a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf"><em>ISLR</em>
-Ch. 2: Statistical Learning</a> (James, Witten, Hastie, Tibshirani).
-Statistical learning, assessing model accuracy.</li>
-<li><a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf"><em>ISLR</em>
-Ch. 5: Resampling Methods</a> (James, Witten, Hastie, Tibshirani).
-Cross-validation, the bootstrap.</li>
-<li><a href="https://rafalab.github.io/dsbook/introduction-to-data-visualization.html"><em>Introduction
-to Data Science</em> Chapters 27 &amp; 29</a> (Rafael A. Irizarry).
-Chapter 27: Introduction to machine learning. Chapter 29: Cross
-validation.</li>
-<li><a href="https://github.com/edrubin/EC524W21"><em>Prediction and
-Machine Learning</em> Lectures 0-3</a> (Ed Rubin).
-<ul>
-<li>Lecture 000: Overview (Why predict?)</li>
-<li>Lecture 001: Statistical learning foundations</li>
-<li>Lecture 002: Model accuracy</li>
-<li>Lecture 003: Resampling Methods</li>
-</ul></li>
-</ul>
-</div>
-<div id="shrinkage-methods" class="section level3">
-<h3>Shrinkage methods</h3>
-<ul>
-<li><a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf"><em>ISLR</em>
-Ch. 6: Linear Model Selection &amp; Regularization</a> (James, Witten,
-Hastie, Tibshirani). Subset selection, shrinkage (ridge, lasso),
-dimension reduction.</li>
-<li><a href="https://github.com/edrubin/EC524W21"><em>Prediction and
-Machine Learning</em> Lecture 5: Shrinkage methods</a> (Ed Rubin).</li>
-</ul>
-</div>
-<div id="classification-methods" class="section level3">
-<h3>Classification methods</h3>
-<ul>
-<li><a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf"><em>ISLR</em>
-Ch. 4: Classification</a> (James, Witten, Hastie, Tibshirani). Logistic
-regression, discriminant analysis, naive Bayes.</li>
-<li><a href="https://github.com/edrubin/EC524W21"><em>Prediction and
-Machine Learning</em> Lecture 6: Classification</a> (Ed Rubin).</li>
-<li><a href="https://mdsr-book.github.io/mdsr2e/ch-vizI.html"><em>Modern
-Data Science with R</em> Chapters 10-11</a> (Baumer, Kaplan, and
-Horton). Chapter 10: Predictive modeling. Chapter 3: Supervised
-learning.</li>
-<li><a href="https://rafalab.github.io/dsbook/introduction-to-data-visualization.html"><em>Introduction
-to Data Science</em> Chapters 31-32</a> (Rafael A. Irizarry). Chapter
-31: Examples of algorithms. Chapter 32: Machine learning in
-practice.</li>
-</ul>
-</div>
-<div id="machine-learning-with-tidymodels" class="section level3">
-<h3>Machine learning with <code>tidymodels</code></h3>
-<ul>
-<li><a href="https://emilhvitfeldt.github.io/ISLR-tidymodels-labs/index.html">ISLR
-tidymodels Labs</a> (Emil Hvitfeldt). All labs from <em>ISLR</em>
-written using the tidymodels library.</li>
-<li><a href="https://github.com/edrubin/EC524W21"><em>Prediction and
-Machine Learning</em> Labs</a> (Ed Rubin and Stephen Reed).
-<ul>
-<li>Kaggle notebooks on “tidymodels-ing”</li>
-<li>Labs 3-5</li>
-</ul></li>
-</ul>
-</div>
-<div id="unsupervised-learning" class="section level3">
-<h3>Unsupervised learning</h3>
-<ul>
-<li><a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf"><em>ISLR</em>
-Ch. 12: Unsupervised Learning</a> (James, Witten, Hastie,
-Tibshirani).</li>
-<li><a href="https://mdsr-book.github.io/mdsr2e/ch-vizI.html"><em>Modern
-Data Science with R</em> Chapter 12: Unsupervised Learning</a> (Baumer,
-Kaplan, and Horton).</li>
-<li><a href="https://rafalab.github.io/dsbook/introduction-to-data-visualization.html"><em>Introduction
-to Data Science</em> Chapter 34: Clustering</a> (Rafael A.
-Irizarry).</li>
-</ul>
-</div>
-<div id="further-methods-in-machine-learning" class="section level3">
-<h3>Further methods in machine learning</h3>
-<ul>
-<li><a href="https://web.stanford.edu/~hastie/ISLR2/ISLRv2_website.pdf"><em>ISLR</em></a>
-(James, Witten, Hastie, Tibshirani).
-<ul>
-<li>Ch. 8: Tree-Based Methods</li>
-<li>Ch. 9: Support Vector Machines</li>
-<li>Ch. 10: Deep Learning</li>
-</ul></li>
-<li><a href="https://github.com/edrubin/EC524W21"><em>Prediction and
-Machine Learning</em> Lectures</a> (Ed Rubin).
-<ul>
-<li>Lecture 007: Decision Trees</li>
-<li>Lecture 008: Ensemble Methods</li>
-<li>Lecture 009: Support Vector Machines</li>
-</ul></li>
-</ul>
-</div>
-<div id="applications-of-machine-learning-in-economics" class="section level3">
-<h3>Applications of machine learning in economics</h3>
-<ul>
-<li><a href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.31.2.87">“Machine
-Learning: An Applied Econometric Approach”</a> (Mullainathan &amp;
-Spiess, <em>Journal of Economic Perspectives</em> 2017).</li>
-<li><a href="https://www.science.org/doi/10.1126/science.aal4321">“Beyond
-prediction: Using big data for policy problems”</a> (Susan Athey,
-<em>Science</em> 2017).</li>
-<li><a href="https://www.nber.org/system/files/chapters/c14009/c14009.pdf">“The
-Impact of Machine Learning on Economics”</a> (Susan Athey, 2019).</li>
-<li><a href="https://github.com/demirermert/MLInference/blob/master/NBER_SI_DEV_master_lecture.pdf">“Machinistas
-meet randomistas: useful ML tools for empirical researchers,”</a>
-(Esther Duflo, NBER Summer Institute Master Lecture 2018).</li>
-<li><a href="http://cameron.econ.ucdavis.edu/e240f/machinelearning.html">Slides
-on Machine Learning</a> (Colin Cameron).</li>
-<li><a href="https://sites.google.com/view/dariosansone/resources/machine-learning">“Machine
-Learning for Economists”</a> (Dario Sansone). Long list of resources,
-applications, and citations.</li>
-</ul>
-</div>
-<div id="databases-sql" class="section level3">
-<h3>Databases (SQL)</h3>
-<ul>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/16-databases/16-databases.html"><em>Data
-Science for Economists</em> Lecture 16: Databases</a> (Grant
-McDermott).</li>
-<li><a href="https://github.com/dlab-berkeley/sql-for-r-users">SQL for R
-Users</a> (UC Berkeley D-Lab).</li>
-<li><a href="https://datacarpentry.org/r-socialsci/">Data Management
-with SQL for Social Scientists</a> (The Carpentries).</li>
-<li><a href="https://mdsr-book.github.io/mdsr2e/ch-sql.html"><em>Modern
-Data Science with R</em> Chapter 15: Database querying using SQL</a>
-(Baumer, Kaplan, and Horton).</li>
-</ul>
-</div>
-<div id="distributed-and-cloud-computing" class="section level3">
-<h3>Distributed and cloud computing</h3>
-<ul>
-<li><em>Data Science for Economists</em> (Grant McDermott):
-<ul>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/14-gce-i/14-gce-i.html">Lecture
-14: Google Compute Engine (Part I)</a>.</li>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/14-gce-ii/14-gce-ii.html">Lecture
-14: Google Compute Engine (Part II)</a>.</li>
-<li><a href="https://raw.githack.com/uo-ec607/lectures/master/17-spark/17-spark.html">Lecture
-17: Spark</a>.</li>
-</ul></li>
-<li><a href="https://mdsr-book.github.io/mdsr2e/ch-big.html"><em>Modern
-Data Science with R</em> Chapter 21: Epilogue: Towards “big data”</a>
-(Baumer, Kaplan, and Horton).</li>
-</ul>
-</div>
+<div id="latex-code" class="section level2">
+<h2>Latex code</h2>
+<p>You can write math formulas inline like this: <span class="math inline">\(2 \times 3 = 6\)</span> or on their own line like
+this:</p>
+<p><span class="math display">\[y_i = \alpha + \beta x_i +
+\epsilon_i\]</span></p>
+<p>Easy!</p>
+<p>If you don’t leave a blank line in between paragraphs, it won’t give
+you a line break. Unless you put a backslash at the end of the
+line…<br />
+Then it will!</p>
 </div>
 </div>
 

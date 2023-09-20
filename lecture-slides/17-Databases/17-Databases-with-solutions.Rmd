@@ -1,7 +1,7 @@
 ---
-title: "Lecture 17: Databases and Big Data"
+title: "Topic 17: Databases and Big Data"
 author: "Nick Hagerty <br> ECNS 460/560 Fall 2023 <br> Montana State University"
-date: ".small[<br> *These slides are adapted from [“Data Science for Economists”](https://raw.githack.com/uo-ec607/lectures/master/16-databases/16-databases.html) by Grant R. McDermott, used under the [MIT License](https://github.com/uo-ec607/lectures/blob/master/LICENSE).]"
+date: "<br> *Based partly on materials by [Grant McDermott](https://raw.githack.com/uo-ec510-2020-spring/lectures/master/15-databases/15-databases.html) under an MIT license."
 output:
   xaringan::moon_reader:
     css: ['default', 'metropolis', 'metropolis-fonts', 'css/my-css.css']
@@ -144,8 +144,10 @@ Better solutions:
 Spark can scale in ways that other systems can't.
 * Move from a local test dataset to a massive dataset on a remote cluster, with minimal changes to your code.
 
-Key advantage: Ability to process data both **in memory** and **on disk.**
-* Deploys the optimal combination of resources for where it's deployed.
+**Key advantage:** Ability to process data both **in memory** and **on disk.**
+* Combines the best features of cluster computing and relational databases.
+* Uses the optimal combination of resources for where it's deployed.
+* Does most of this quietly, behind the scenes.
 
 **Tutorial** by Grant McDermott: [Here](https://raw.githack.com/uo-ec607/lectures/master/17-spark/17-spark.html)
 
@@ -155,6 +157,17 @@ class: inverse, middle
 name: databases
 
 # Databases in R
+
+---
+
+# Preliminaries
+
+Install the packages we'll be using:
+
+```{r, cache=F, message=F, warning=F}
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, DBI, dbplyr, RSQLite, bigrquery, nycflights13, tictoc)
+```
 
 ---
 
@@ -207,14 +220,7 @@ Some other (more powerful) implementations of SQL:
 
 # R packages
 
-Run these preliminaries:
-
-```{r, cache=F, message=F, warning=F}
-if (!require("pacman")) install.packages("pacman")
-pacman::p_load(tidyverse, DBI, dbplyr, RSQLite, bigrquery, nycflights13, tictoc)
-```
-
-**The R packages we'll need:**
+**The R packages we need:**
 1. `dbplyr` translates tidyverse code to SQL.
 2. `DBI` helps R connect to the database.
 3. A backend interface to the specific type of database we want to work with.
@@ -358,11 +364,11 @@ Only when you print the object does it generate the SQL and query the database:
 
 ```{r tailnum_delay_db_print}
 tic()
-print(tailnum_delay_db, n = 2)
+print(tailnum_delay_db, n = 4)
 toc()
 ```
 
-Even then it only pulls down exactly as many rows as you request.
+Even then it tries to do as little work as possible and only pulls down a few rows.
 
 ---
 
@@ -594,7 +600,7 @@ Here's an example:
 SELECT *
 FROM flights AS f
 LEFT JOIN weather AS w 
-ON f.year = w.year AND f.month = w.month 
+ON f.origin = w.origin AND f.year = w.year AND f.month = w.month 
   AND f.day = w.day AND f.hour = w.hour
 ```
 
@@ -617,7 +623,7 @@ ON f.year = w.year AND f.month = w.month
 
 # More challenges
 
-**Use SQL queries to answer these questions for year 2013:**
+Use SQL queries to answer these questions for year 2013:
 
 1. How many nonstop flights went from New York airports to Bozeman (BZN)? Return all matching rows.
 
@@ -627,7 +633,53 @@ ON f.year = w.year AND f.month = w.month
 
 4. Ignore duplicate routes. Which 10 distinct *routes* had the longest flights?
 
-5. **Advanced:** What percentage of flights took off in freezing temperatures? Make sure to confirm the join gives you what you want. *(Hint: First just count the number of flights that took off in temperatures below/above freezing -- calculating the percentage within SQL requires a subquery.)*
+5. **Advanced:** What percentage of flights took off in freezing temperatures? Make sure to confirm the join gives you what you want. *(Hint: First just count the number of flights that took off in temperatures below and above freezing -- calculating the percentage within SQL requires a subquery.)*
+
+```{sql connection=lite_con, echo=F, eval=F}
+/* 1. How many nonstop flights went from New York airports to Bozeman (BZN)? Return all matching rows. */
+SELECT *
+FROM flights
+WHERE dest == "BZN"
+```
+
+```{sql connection=lite_con, echo=F, eval=F}
+/* 2. List the number of flights to Bozeman per month, naming this column `flights_count`. Were the Bozeman flights year-round or in specific seasons? */
+SELECT month, COUNT(*) AS flights_count
+FROM flights
+WHERE dest == "BZN"
+GROUP BY month
+```
+
+```{sql connection=lite_con, echo=F, eval=F}
+/* 3. What were the top 10 longest flights out of NYC airports? */
+SELECT carrier, flight, dest, air_time
+FROM flights
+ORDER BY air_time DESC
+LIMIT 10
+```
+
+```{sql connection=lite_con, echo=F, eval=F}
+/* 4. Ignore duplicate routes. Which 10 distinct *routes* had the longest flights? */
+SELECT dest, MAX(air_time) AS air_time
+FROM flights
+GROUP BY dest
+ORDER BY air_time DESC
+LIMIT 10
+```
+
+```{sql connection=lite_con, echo=F, eval=F}
+/* 5. **Advanced:** What percentage of flights took off in freezing temperatures? */
+SELECT 
+  w.temp < 32 AS freezing,
+  AVG(w.temp) AS temp,
+  COUNT(*) AS count,
+  COUNT(*) * 1.0 /(SELECT COUNT(*) FROM flights) AS proportion
+FROM flights AS f
+LEFT JOIN weather AS w 
+ON f.origin = w.origin AND f.year = w.year AND f.month = w.month AND f.day = w.day AND f.hour = w.hour
+WHERE w.temp
+GROUP BY freezing
+```
 
 
 ---
